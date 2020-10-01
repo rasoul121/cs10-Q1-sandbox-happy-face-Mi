@@ -10,6 +10,7 @@ color measlesColor = red;
 color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
+int triangleX1, triangleY1, triangleX2, triangleY2, triangleX3, triangleY3;
 
 void setup() {
   size (900, 600);
