@@ -12,13 +12,14 @@ color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
 int buttonX, buttonY, buttonWidth, buttonHeight;
 color buttonColour, blue, black;
-int triangleX1,triangleY1, triangleX2, triangleY2,triangleX3,triangleY3; 
 String quit = "Quit";
 PFont titleFont;
 color quitButtonwhite = #F2EEEB;
 color quitButtonColor = quitButtonwhite;
+float triangleX1, triangleY1,triangleX2, triangleY2, triangleX3, triangleY3;
+int coverX, coverY, coverDiameter;
 void setup() {
-  size (700, 500);
+  size (800, 500);
   //fullScreen();
   println("Screen Width is", displayWidth, "Screen Height is", displayHeight);
  // println("start of console");
@@ -29,10 +30,12 @@ void setup() {
   //faceDraw();
   background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  ellipse(coverX, coverY, coverDiameter, coverDiameter);
+  strokeWeight(reset);
 }//End setup
 
 void draw() {
-  //
+  
   if (mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) { //Button Hoverover
     buttonColour = blue; //Hoverover
   } else {
@@ -60,7 +63,7 @@ textAlign(CENTER, CENTER); //Aligns the X&Y
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
-  triangle(triangleX1,triangleY1, triangleX2, triangleY2,triangleX3,triangleY3);
+  triangle(triangleX1, triangleY1,triangleX2, triangleY2, triangleX3, triangleY3);
 }//End draw
 
 void keyPressed() {

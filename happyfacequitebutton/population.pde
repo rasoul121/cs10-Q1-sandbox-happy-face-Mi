@@ -19,18 +19,15 @@ void population() {
   mouthX2 = rightEyeX;
   mouthY2 = mouthY1;
   mouthThick = 15;
-  triangleX1 = width/2;
-  triangleY1 =height*4/10;
-  triangleX2 =width*7/15;
-  triangleY2 =height*8/5;
-  triangleX3 =width*6/8;
-  triangleY3 =triangleY2;
   reset = 1;
   buttonX = width*15/16;
   buttonY = height*0/14;
   buttonWidth = width*1/16;
-  buttonHeight = height*5/14;
+  buttonHeight = height*1/13;
   blue =#0846FC;
   black =#0E0F15;
   titleFont = createFont ("Yu Gothic UI light", 55); //font size 55
+  coverX = width/2;
+  coverY = height/2;
+  coverDiameter = height;
 }//End population
