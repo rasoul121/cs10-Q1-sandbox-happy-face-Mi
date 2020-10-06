@@ -11,12 +11,12 @@ color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
 int buttonX, buttonY, buttonWidth, buttonHeight;
-color buttonColour, green, black;
+color buttonColour, blue, black;
 int triangleX1,triangleY1, triangleX2, triangleY2,triangleX3,triangleY3; 
-String quit = "X";
+String quit = "Quit";
 PFont titleFont;
-color quitButtonblue = #1CEADE;
-color quitButtonblue = quitButtonblue
+color quitButtonwhite = #F2EEEB;
+color quitButtonColor = quitButtonwhite;
 void setup() {
   size (700, 500);
   //fullScreen();
@@ -34,16 +34,18 @@ void setup() {
 void draw() {
   //
   if (mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) { //Button Hoverover
-    buttonColour = green; //Hoverover
+    buttonColour = blue; //Hoverover
   } else {
     buttonColour = black;
   }// End IF
   fill(buttonColour); //black all the time, green with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
-  fill(quitButtonblue);
+  fill(quitButtonwhite);
 textAlign(CENTER, CENTER); //Aligns the X&Y
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-
+ textFont(titleFont, width*1/35);
+  text(quit, buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(403); //Reset
   //
   measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);
