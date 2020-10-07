@@ -17,7 +17,12 @@ PFont titleFont;
 color quitButtonwhite = #F2EEEB;
 color quitButtonColor = quitButtonwhite;
 float triangleX1, triangleY1,triangleX2, triangleY2, triangleX3, triangleY3;
-int coverX, coverY, coverDiameter;
+int LEyeX, LEyeY, LEyeDiameter;
+int REyeX, REyeY, REyeDiameter;
+color  LEyegreen = #D7F01F;
+color LEyecolor =  LEyegreen;
+color  REyegreen = #D7F01F;
+color REyecolor = REyegreen;
 void setup() {
   size (800, 500);
   //fullScreen();
@@ -30,8 +35,6 @@ void setup() {
   //faceDraw();
   background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
-  ellipse(coverX, coverY, coverDiameter, coverDiameter);
-  strokeWeight(reset);
 }//End setup
 
 void draw() {
@@ -63,7 +66,10 @@ textAlign(CENTER, CENTER); //Aligns the X&Y
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
-  triangle(triangleX1, triangleY1,triangleX2, triangleY2, triangleX3, triangleY3);
+    ellipse(LEyeX, LEyeY, LEyeDiameter, LEyeDiameter);
+  ellipse(REyeX, REyeY, REyeDiameter, REyeDiameter);
+fill( LEyecolor);
+fill(REyegreen);
 }//End draw
 
 void keyPressed() {

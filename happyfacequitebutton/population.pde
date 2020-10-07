@@ -27,7 +27,13 @@ void population() {
   blue =#0846FC;
   black =#0E0F15;
   titleFont = createFont ("Yu Gothic UI light", 55); //font size 55
-  coverX = width/2;
-  coverY = height/2;
-  coverDiameter = height;
+   LEyeX = width*3/8;
+  LEyeY = height*1/4;
+  LEyeDiameter = height/11;
+  REyeX = width*5/8;
+  REyeY = leftEyeY;
+  REyeDiameter = height/11;
+  LEyegreen=#D7F01F;
+  REyegreen=#D7F01F;
+    
 }//End population
